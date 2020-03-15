@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+   body {
+
+       background-image: url(https://losangeles-mp7static.mlsdigital.net/styles/image_default/s3/images/022920_LA_GALAXY_JL_0042.JPG?2ArB_gLTq3i1RtAorK96myjfK8WiJimU&amp;itok=ypEFAJJ4&amp;c=a8f11ccccac87818fa7a1af1cc33b69e);
+
+       background-size: 2600px 3000px;
+
+
+   }
+
+     h1{
+        text-align: center;
+         font-family: "Hiragino Kaku Gothic ProN";
+        color:bisque;
+}
+    form{
+        text-align: center;
+    color: #8a2bde;
+    }
+
+</style>
+
+
+     </head>
+<body>
+ <h1>Jobs for Soccer players </h1>
+<form action = "#" th:action= "@{/process}" th:object = "${job}" method  = "post">
+<br/>
+    <br/>
+    Name:<br/><input type = "text" th:field="{name}"/>
+    <span th:if ="${#fields.hasErrors('name')}"
+          th:errors ="{title}"></span><br />
+
+    <br/>
+    Age: <br/> <input type = "text" th:field="  {age}"/>
+    <span th:if = "${#fields.hasErrors('age)}"
+          th:errors ="{age}"></span><br />
+
+    <br/>
+    Height:<br/><input type = "text" th:field="{height}"/>
+    <span th:if = "${#fields.hasErrors('height')}"
+          th:errors = "{height}"></span><br />
+    <br/>
+   Positon:</br><input type = "text" th:field ="{position}"/>
+    <span th:if = "${#fields.hasErrors('position')}"
+          th:errors = "{position}"></span><br />
+<br/>
+    <br/>
+   <input type = "submit" value ="Submit"/>
+
+</form>
+
+</body>
+</html>

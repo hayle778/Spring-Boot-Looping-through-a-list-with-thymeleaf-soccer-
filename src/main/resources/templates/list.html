@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+    h1{
+        text-align: center;
+    }
+</style>
+
+
+
+<body>i8
+<h1>Jobs for Soccer players </h1>
+<div th:each="/add">Add a player</div><br/>
+
+<h4 th:inline = "text">[[${job.name}]] @ [[${job.age}]]@[[${job.height}]] @[[${job.position}]]</h4>
+  <p th:text = "${job.description}"></p>
+
+
+</div>
+</body>
+</html>
