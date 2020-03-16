@@ -15,10 +15,11 @@
 
     }
 a{
-        font-size: x-large;
+        text-align: center;
+    font-size: x-large;
 }
     i{
-
+text-align: center;
         font-max-size: x-large;
     color: black;
 }
@@ -34,18 +35,26 @@ a{
         padding-bottom: 30px;
         padding-left: 40px;
     }
+body{
+    text-align: center;
+}
+h4{
+    text-align:center;
+}
 
 
-
-
-
+b{
+    font-family: "Hiragino Kaku Gothic ProN";
+}
     href{
     text-align: center;
 }
 h4{
 
 }
-
+b{
+    text-underline: darksalmon;
+}
 </style>
 
 
@@ -56,7 +65,8 @@ h4{
 <br/>
 <br/>
 
-<i>List of the players</i><br/>
+<b>List of the Registered players</b><br/>
+<br/>
 <div th:each="job: ${jobs}">
     <h4 th:inline = "text">[[${job.name}]] @ [[${job.age}]]@[[${job.height}]] @[[${job.position}]]</h4>
 
