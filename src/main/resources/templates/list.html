@@ -6,19 +6,60 @@
 </head>
 
 <style>
+    body {
+
+        background-image: url(https://losangeles-mp7static.mlsdigital.net/styles/image_default/s3/images/022920_LA_GALAXY_JL_0042.JPG?2ArB_gLTq3i1RtAorK96myjfK8WiJimU&amp;itok=ypEFAJJ4&amp;c=a8f11ccccac87818fa7a1af1cc33b69e);
+
+        background-size: 2600px 3000px;
+
+
+    }
+a{
+        font-size: x-large;
+}
+    i{
+
+        font-max-size: x-large;
+    color: black;
+}
     h1{
         text-align: center;
+        font-family: "Hiragino Kaku Gothic ProN";
+        color:bisque;}
+    h1 {
+        border: 1px solid black;
+        background-color: plum;
+        padding-top: 20px;
+        padding-right: 40px;
+        padding-bottom: 30px;
+        padding-left: 40px;
     }
+
+
+
+
+
+    href{
+    text-align: center;
+}
+h4{
+
+}
+
 </style>
 
 
 
-<body>i8
-<h1>Jobs for Soccer players </h1>
-<div th:each="/add">Add a player</div><br/>
+<body>
+<h1>Job for Soccer players </h1>
+<a href="/add">Add the players</a><br/>
+<br/>
+<br/>
 
-<h4 th:inline = "text">[[${job.name}]] @ [[${job.age}]]@[[${job.height}]] @[[${job.position}]]</h4>
-  <p th:text = "${job.description}"></p>
+<i>List of the players</i><br/>
+<div th:each="job: ${jobs}">
+    <h4 th:inline = "text">[[${job.name}]] @ [[${job.age}]]@[[${job.height}]] @[[${job.position}]]</h4>
+
 
 
 </div>

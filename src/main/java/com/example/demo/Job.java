@@ -16,27 +16,26 @@ import javax.validation.constraints.Size;
 
      @Entity
     public class Job {
-     @Id
-     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+         @Id
+         @GeneratedValue(strategy = GenerationType.AUTO)
+         private long id;
 
          @NotNull
-         @Size(min=4)
+         @Size(min = 1)
          private String name;
 
          @NotNull
-         @Size(min=2)
-         private int age;
+         @Size(min = 0)
+         private String age;
 
          @NotNull
-         @Size(min=2)
-         private int height;
+         @Size(min = 0)
+         private String height;
 
          @NotNull
-         @Size(min=10)
+         @Size(min = 2)
          private String position;
 
-        // ayele ayala
 
          public long getId() {
              return id;
@@ -54,19 +53,19 @@ import javax.validation.constraints.Size;
              this.name = name;
          }
 
-         public int getAge() {
+         public String getAge() {
              return age;
          }
 
-         public void setAge(int age) {
+         public void setAge(String age) {
              this.age = age;
          }
 
-         public int getHeight() {
+         public String getHeight() {
              return height;
          }
 
-         public void setHeight(int height) {
+         public void setHeight(String height) {
              this.height = height;
          }
 
@@ -78,9 +77,6 @@ import javax.validation.constraints.Size;
              this.position = position;
          }
      }
-
-
-
 
 
 
